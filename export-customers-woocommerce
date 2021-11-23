@@ -63,7 +63,7 @@ class ExportClient
             $fp = fopen('export-' . $date . '.xls', 'w');
 
             foreach ($exports as $export) {
-                fputcsv($fp, array_map('utf8_decode',array_values($export)), "\t", '"',);
+                fputcsv($fp, array_map('utf8_decode',array_values($export)), "\t");
             }
             fclose($fp);
         }
